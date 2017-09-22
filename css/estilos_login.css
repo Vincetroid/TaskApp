@@ -1,0 +1,100 @@
+body{
+	background-image: url('../img/ep_naturalwhite.png');
+}
+
+#bootstrap_overrides .row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#bootstrap_overrides .table>tbody>tr>td{
+	border-top: none;
+}
+
+.name-app{
+	font-family: lobster;
+}
+
+/*#padre {
+	position: relative;
+	height: 700px;
+}
+#hijo {
+	z-index: 100;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 30%;
+	width: 50%;
+	margin: -15% 0 0 -25%;
+}*/
+
+.parent-vertical-align {
+	padding: 6% 0;
+}
+.child-vertical-align {
+	padding: 10% 0;
+}
+
+
+
+
+
+
+#tablaFormReg{
+	margin: 0 auto;
+	margin-top: 190px;
+	padding: 0px;
+	background: rgba(140,18,38,0.7);
+	border-radius: 15px;
+}
+
+#tablaFormReg td{
+	padding: 3px 10px 3px 10px;
+	width: 200px;
+}
+
+.first-input{
+	margin-top: 26px;
+}
+
+.input-box{
+	border-radius: 5px;
+	border: 3px black solid;
+	font-size: 0.9em;
+	padding: 5px;
+	width: 200px;
+	margin: 0 auto;
+	display: block;
+}
+
+.btn-success{
+	transition: background 0.4s ease;
+}
+
+.btn-success:hover{
+	background: green;
+}
+
+.btn-center{
+	display: block;
+	margin-right: auto; 
+	margin-left: auto;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+.footer-p{
+	font-size: 0.8em;
+	color: white;
+}
+
+img.footer-img{
+	margin-bottom: 10px;
+	filter: brightness(200%);
+	-webkit-filter: brightness(200%);
+}
+
+#pie_pagina{
+	margin-top: 120px;
+}
