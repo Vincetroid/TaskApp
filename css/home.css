@@ -1,5 +1,5 @@
 body{
-	background-image: url('../img/ep_naturalwhite.png');
+	background-image: url('../img/whirlpool.png');
 }
 
 #bootstrap_overrides .row{
@@ -21,9 +21,22 @@ body{
 	font-family: indie flower;
 }
 
-.task-separator{
-	padding: 0;
-	margin: 0;
+.btn-task{
+	background: mediumseagreen;
+	border: none;
+	height: 25.84px;
+	letter-spacing: 1px;
+	transition: background ease 0.4s;
+	transition: color ease 0.4s;
+}
+
+.btn-task:hover{
+	background: #1d1d1d;
+	color: white;
+}
+
+.btn-task:active{
+	background: blue;
 }
 
 .color{
@@ -36,7 +49,19 @@ input{
 
 input.min, input.hrs{
 	width : 42px;
-	margin-left: -4px;
+	margin-left: -7px;
+	background: whitesmoke;
+    border: none;
+    height: 25.84px;
+}
+
+input.tas{
+	width: 260px;
+	background: whitesmoke;
+	border-radius: 3px;
+    border: solid 2px gray;
+    height: 25.84px;
+    font-size: 0.7em;
 }
 
 
@@ -45,7 +70,7 @@ input.min, input.hrs{
 	margin-top: 190px;
 	padding: 0px;
 	background: rgba(140,18,38,0.7);
-	border-radius: 15px;
+	
 }
 
 #tablaFormReg td{
@@ -65,35 +90,4 @@ input.min, input.hrs{
 	width: 200px;
 	margin: 0 auto;
 	display: block;
-}
-
-.btn-success{
-	transition: background 0.4s ease;
-}
-
-.btn-success:hover{
-	background: green;
-}
-
-.btn-center{
-	display: block;
-	margin-right: auto; 
-	margin-left: auto;
-	margin-top: 15px;
-	margin-bottom: 10px;
-}
-
-.footer-p{
-	font-size: 0.8em;
-	color: white;
-}
-
-img.footer-img{
-	margin-bottom: 10px;
-	filter: brightness(200%);
-	-webkit-filter: brightness(200%);
-}
-
-#pie_pagina{
-	margin-top: 120px;
 }

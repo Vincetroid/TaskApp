@@ -16,34 +16,95 @@
 		</div>
 	</div>
 
-	<div class="row color">
-		<div class="col-sm-6">
-			<ol>
-				<li><p class="task">Compararse con otros es de perdedores</p></li>
-				<li><p class="task">No seas miserables por quien eres</p></li>
-				<li><p class="task">Acéptate como eres</p></li>
-				<li><p class="task">Compite contra ti mismo</p></li>
-				<li><p class="task">Forjar acero cada día</p></li>
-				<li><p class="task">Sé constante</p></li>
-				<li><p class="task">No la stalkees</p></li>
-				<li><p class="task">No inviertas demasiado emocionalmente en ellas</p></li>
-				<li><p class="task">Si eres inseguro todo está perdido</p></li>
-				<li><p class="task">Sé fiel a quien eres</p></li>
-				<li><p class="task">Domínate a ti mismo</p></li>
-				<li><p class="task">Cuando estés bien contigo estarás bien con las chicas</p></li>
-			</ol>
+	<div class="row color task">
+		<div class="col-sm-7">
+			<p>
+				Compararse con otros es de perdedores 
+			</p>
 		</div>
 		<div class="col-sm-4">
-			<!-- <input type="time" name="time" id="time" required> -->
-			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="5" valueAsNumber required>
-			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="5" valueAsNumber required>
-			<input type="button" class="" value="Iniciar">
-
+			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="button" class="btn-task" value="Iniciar" onkeypress="console.log('evaluar enter, poner background css que tiene active y hacer acciones')">
 		</div>
-		<div class="col-sm-1">
-		</div>
+		<div class="col-sm-1"></div>
 	</div>
 
+	<div class="row color task">
+		<div class="col-sm-7">
+			<p>No seas miserables por quien eres</p>
+		</div>
+		<div class="col-sm-4">
+			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="button" class="btn-task" value="Iniciar">
 
+		</div>
+		<div class="col-sm-1"></div>
+	</div>
+
+	<div class="row color task">
+		<div class="col-sm-7">
+			<p >Acéptate como eres</p>
+		</div>
+		<div class="col-sm-4">
+			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="button" class="btn-task" value="Iniciar">
+
+		</div>
+		<div class="col-sm-1"></div>
+	</div>
+
+	<div class="row color task">
+		<div class="col-sm-7">
+			<p >Compite contra ti mismo</p>
+		</div>
+		<div class="col-sm-4">
+			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="button" class="btn-task" value="Iniciar">
+
+		</div>
+		<div class="col-sm-1"></div>
+	</div>
+
+	<div class="row color task">
+		<div class="col-sm-7">
+			<p >Forjar acero cada día</p>
+		</div>
+		<div class="col-sm-4">
+			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="button" class="btn-task" value="Iniciar">
+
+		</div>
+		<div class="col-sm-1"></div>
+	</div>
+
+	<div class="row color task">
+		<div class="col-sm-7">
+			<p >Sé constante</p>
+		</div>
+		<div class="col-sm-4">
+			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="button" class="btn-task" value="Iniciar">
+		</div>
+		<div class="col-sm-1"></div>
+	</div>
+
+	<div class="row color task">
+		<div class="col-sm-7">
+			<input type="text" class="tas" id="hh00" placeholder="Nueva tarea">
+		</div>
+		<div class="col-sm-4">
+			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="button" class="btn-task" value="Iniciar">
+		</div>
+		<div class="col-sm-1"></div>
+	</div>
+			
 </body>
 </html>
