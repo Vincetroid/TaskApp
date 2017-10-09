@@ -10,6 +10,7 @@
 	<script src="js/sideMenu.js"></script>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/home.css" />
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 </head>
 <body id="bootstrap_overrides">

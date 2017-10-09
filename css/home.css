@@ -1,6 +1,5 @@
 body{
-	background-image: url('../img/whirlpool.png');
-	/*background: red;*/
+	background-image: url('../img/ep_naturalblack.png');
 }
 
 #bootstrap_overrides .row{
@@ -12,10 +11,20 @@ body{
 	border-top: none;
 }
 
+#side_menu{
+	position: fixed;
+	display: block; 
+	background: AliceBlue;
+	width: 100px;
+	height: 100%;
+	right: 0%;
+	box-shadow: 0px 0px 4px black;
+}
+
 #menu_lines{
     position: fixed;
     top: 1%;
-    right: 32.5px;
+    right: 33px;
 }
 
 #btn-add{
@@ -48,16 +57,6 @@ body{
 	bottom: 25px;
 	right: 25px;
 	font-size: 4em;
-}
-
-#side_menu{
-	position: fixed;
-	display: block; 
-	background: AliceBlue;
-	width: 100px;
-	height: 100%;
-	right: 0%;
-	box-shadow: 0px 0px 4px black;
 }
 
 .name-app{
