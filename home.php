@@ -37,10 +37,10 @@
 			</p>
 		</div>
 		<div class="col-sm-4">
-			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
-			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
-			<input type="number" class="seg" id="ss00" min="0" max="59" placeholder="ss" step="1" valueAsNumber>
-			<input type="button" class="btn-task" value="Iniciar" onkeypress="console.log('evaluar enter, poner background css que tiene active y hacer acciones')">
+			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="number" class="seg" id="ss" min="0" max="59" placeholder="ss" step="1" valueAsNumber>
+			<input type="button" class="btn-task" value="Iniciar">
 		</div>
 		<div class="col-sm-1"></div>
 	</div>
@@ -50,8 +50,8 @@
 			<p>No seas miserables por quien eres</p>
 		</div>
 		<div class="col-sm-4">
-			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
-			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
 			<input type="button" class="btn-task" value="Iniciar">
 
 		</div>
@@ -63,8 +63,8 @@
 			<p >Acéptate como eres</p>
 		</div>
 		<div class="col-sm-4">
-			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber>
-			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber>
+			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber>
+			<input type="number" class="min" id="mm" min="0" max="59" placeholder="mm" step="1" valueAsNumber>
 			<input type="button" class="btn-task" value="Iniciar">
 
 		</div>
@@ -76,8 +76,8 @@
 			<p >Compite contra ti mismo</p>
 		</div>
 		<div class="col-sm-4">
-			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
-			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
 			<input type="button" class="btn-task" value="Iniciar">
 
 		</div>
@@ -89,8 +89,8 @@
 			<p >Forjar acero cada día</p>
 		</div>
 		<div class="col-sm-4">
-			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
-			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
 			<input type="button" class="btn-task" value="Iniciar">
 
 		</div>
@@ -102,8 +102,8 @@
 			<p >Sé constante</p>
 		</div>
 		<div class="col-sm-4">
-			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
-			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
 			<input type="button" class="btn-task" value="Iniciar">
 		</div>
 		<div class="col-sm-1"></div>
@@ -111,11 +111,11 @@
 
 	<div class="row color task">
 		<div class="col-sm-7">
-			<input type="text" class="tas" id="hh00" placeholder="Nueva tarea">
+			<input type="text" class="tas" id="hh" placeholder="Nueva tarea">
 		</div>
 		<div class="col-sm-4">
-			<input type="number" class="hrs" id="hh00" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
-			<input type="number" class="min" id="mm00" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
+			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
+			<input type="number" class="min" id="mm" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
 			<input type="button" class="btn-task" value="Iniciar">
 		</div>
 		<div class="col-sm-1"></div>
@@ -128,5 +128,10 @@
 	<audio id="audioTrompeta">
 	  <source src="TrompetaMilitar.mp3" type="audio/mpeg">
 	</audio>
+
+	<audio id="audioSlowSpringBoard">
+	  <source src="audio/slow-spring-board.mp3" type="audio/mpeg">
+	</audio>
+	
 </body>
 </html>

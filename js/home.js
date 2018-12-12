@@ -5,46 +5,48 @@ $(document).ready(function(){
 		$(this).val("Hecho");
 		$(this).css('background-color','#bdb37f');
 
-		var hh = Number($('#hh00').val());
-		var mm = Number($('#mm00').val());
-		var ss = Number($('#ss00').val());
+		var hh = Number($('#hh').val());
+		var mm = Number($('#mm').val());
+		var ss = Number($('#ss').val());
 
-		if(hh == 0 && mm == 0){
+		if(hh == 0 && mm == 0 && ss == 0){
 			alert("Establezca un tiempo");
 		} else {
 			let intervalHH = setInterval(function(){ 
 				--hh;
 				if(hh == 0){
 					clearInterval(intervalHH);
-					document.getElementById("alarm").play();
+					document.getElementById("audioSlowSpringBoard").play();
 					$("#btnStop").show();
 				}
-				$('#hh00').empty().val(hh);
+				$('#hh').empty().val(hh);
 			}, 3600000);
 
 			let intervalMM = setInterval(function(){ 
 				--mm;
 				if(mm == 0){
 					clearInterval(intervalMM);
-					document.getElementById("audioTrompeta").play();
+					document.getElementById("audioSlowSpringBoard").play();
 					$("#btnStop").show();
 				}
-				$('#mm00').empty().val(mm);
+				$('#mm').empty().val(mm);
 			}, 60000);
 
 			let intervalSS = setInterval(function(){ 
 				--ss;
 				if(ss == 0){
 					clearInterval(intervalSS);
+					document.getElementById("audioSlowSpringBoard").play();
+					$("#btnStop").show();
 				}
-				$('#ss00').empty().val(ss);
+				$('#ss').empty().val(ss);
 			}, 1000);
 		}
 
-		alert(hh + ' ' + mm);
+		// alert(hh + ' ' + mm);
 	});
 
-	//
+	//PARECE QUE NO SE USA
 	$("#btnStart").click(function(){
 		//debugger;
 		var tiempo = Number($("#tiempo").val());
@@ -66,9 +68,12 @@ $(document).ready(function(){
 
 
 	$("#btnStop").click(function(){
-		document.getElementById("audioTrompeta").pause();
+		document.getElementById("audioSlowSpringBoard").pause();
 		$("#btnStop").hide();
 		$("#tiempo").focus();
 	});
 
+	function playNotificationSound(argument) {
+		// body...
+	}
 });

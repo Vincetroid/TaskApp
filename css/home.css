@@ -1,5 +1,5 @@
 body{
-	background-image: url('../img/ep_naturalblack.png');
+	background-image: url('../img/lined_paper.png');
 }
 
 #bootstrap_overrides .row{
@@ -14,7 +14,8 @@ body{
 #side_menu{
 	position: fixed;
 	display: block; 
-	background: AliceBlue;
+	/*background: AliceBlue;*/
+	background-image: url('../img/ep_naturalblack.png');
 	width: 100px;
 	height: 100%;
 	right: 0%;
@@ -22,21 +23,42 @@ body{
 }
 
 #menu_lines{
+	filter: invert(100%);
     position: fixed;
     top: 1%;
     right: 33px;
 }
 
 #btn-add{
-	color: black;
+	color: white;
 	position: fixed;
     top: 80px;
 	right: 25px;
 	font-size: 4em;
+	/*transition: color 0.4s ease;*/
+
+	animation-name: concentric;
+	animation-duration: 2s;
+	/*animation-iteration-count: infinite;*/
+}
+
+/*#btn-add::before{
+	border: 4px solid red;
+	border-radius: 29px;
+}*/
+
+@keyframes concentric{
+	50% { 
+	    transition: scale(1.1);
+	}
+}
+
+#btn-add:hover{
+	color: DarkBlue;
 }
 
 #btn-log{
-    color: black;
+    color: white;
 	position: fixed;
     top: 220px;
 	right: 25px;
@@ -44,7 +66,7 @@ body{
 }
 
 #btn-log-out{
-	color: black;
+	color: white;
 	position: fixed;
 	bottom: 180px;
 	right: 23px;
@@ -52,7 +74,7 @@ body{
 }
 
 #btn-config{
-	color: black;
+	color: white;
 	position: fixed;
 	bottom: 25px;
 	right: 25px;
