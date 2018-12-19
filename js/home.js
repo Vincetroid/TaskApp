@@ -3,6 +3,8 @@ $(document).ready(function(){
 	//CLICK AL INICIAR UNA TAREA
 	$('.btn-task').on('click', function(){
 		$(this).val("Hecho");
+		$(this).attr("data-task-state","active");
+		// const taskState = document.querySelector(`input[data-task-state="active"]`);
 		$(this).css('background-color','#bdb37f');
 
 		var hh = Number($('#hh').val());
@@ -36,7 +38,9 @@ $(document).ready(function(){
 				--ss;
 				if(ss == 0){
 					clearInterval(intervalSS);
-					document.getElementById("audioSlowSpringBoard").play();
+					playNotificationSound("audioSlowSpringBoard");
+					$(this).attr("data-task-state","inactive");
+					$(this).css('background-color','#F00');
 					$("#btnStop").show();
 				}
 				$('#ss').empty().val(ss);
@@ -58,7 +62,7 @@ $(document).ready(function(){
 				--tiempo;
 				if(tiempo == 0){
 					clearInterval(interval);
-					document.getElementById("audioTrompeta").play();
+					
 					$("#btnStop").show();
 				}
 				$("#tiempo_restante").empty().append(tiempo + ' minutos');
@@ -66,14 +70,19 @@ $(document).ready(function(){
 		}
 	});
 
-
+	//PARA ALARMAS LARGAS
 	$("#btnStop").click(function(){
 		document.getElementById("audioSlowSpringBoard").pause();
 		$("#btnStop").hide();
 		$("#tiempo").focus();
 	});
 
-	function playNotificationSound(argument) {
-		// body...
-	}
 });
+
+function taskFinished() {
+	alert('Tarea terminada');
+}
+
+function playNotificationSound(audioId) {
+	document.getElementById(audioId).play();
+}

@@ -33,21 +33,22 @@
 	<div class="row color task">
 		<div class="col-sm-7">
 			<p>
-				Compararse con otros es de perdedores 
+				Una actividad
+				X
 			</p>
 		</div>
 		<div class="col-sm-4">
 			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
 			<input type="number" class="min" id="mm" min="0" max="59" placeholder="mm" step="1" valueAsNumber required>
 			<input type="number" class="seg" id="ss" min="0" max="59" placeholder="ss" step="1" valueAsNumber>
-			<input type="button" class="btn-task" value="Iniciar">
+			<input type="button" class="btn-task" value="Iniciar" data-task-state="inactive">
 		</div>
 		<div class="col-sm-1"></div>
 	</div>
 
 	<div class="row color task">
 		<div class="col-sm-7">
-			<p>No seas miserables por quien eres</p>
+			<p>Otra actividad</p>
 		</div>
 		<div class="col-sm-4">
 			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
@@ -60,7 +61,7 @@
 
 	<div class="row color task">
 		<div class="col-sm-7">
-			<p >Acéptate como eres</p>
+			<p >Actividad 3</p>
 		</div>
 		<div class="col-sm-4">
 			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber>
@@ -73,7 +74,7 @@
 
 	<div class="row color task">
 		<div class="col-sm-7">
-			<p >Compite contra ti mismo</p>
+			<p >Actividad 4</p>
 		</div>
 		<div class="col-sm-4">
 			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
@@ -86,7 +87,7 @@
 
 	<div class="row color task">
 		<div class="col-sm-7">
-			<p >Forjar acero cada día</p>
+			<p >Actividad 4</p>
 		</div>
 		<div class="col-sm-4">
 			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
@@ -99,7 +100,7 @@
 
 	<div class="row color task">
 		<div class="col-sm-7">
-			<p >Sé constante</p>
+			<p >Actividad 5</p>
 		</div>
 		<div class="col-sm-4">
 			<input type="number" class="hrs" id="hh" min="0" max="59" placeholder="hh" step="1" valueAsNumber required>
@@ -120,14 +121,6 @@
 		</div>
 		<div class="col-sm-1"></div>
 	</div>
-		
-	<audio id="alarm">
-		<source src="playinggod.mp3" type="audio/mpeg">
-	</audio>	
-
-	<audio id="audioTrompeta">
-	  <source src="TrompetaMilitar.mp3" type="audio/mpeg">
-	</audio>
 
 	<audio id="audioSlowSpringBoard">
 	  <source src="audio/slow-spring-board.mp3" type="audio/mpeg">
