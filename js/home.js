@@ -1,83 +1,62 @@
-$(document).ready(function(){
+window.onload = () => {
+	//CLICK A UNA TAREA
+	const buttonTask = document.querySelector('.btn-task');
+	buttonTask.addEventListener('click', (e) => {
+		const specificButtonTask = e.target;
+		specificButtonTask.value = 'Hechos';
+		specificButtonTask.setAttribute('data-task-state', 'active');
+		specificButtonTask.style.backgroundColor = '#bdb37f';
 	
-	//CLICK AL INICIAR UNA TAREA
-	$('.btn-task').on('click', function(){
-		$(this).val("Hecho");
-		$(this).attr("data-task-state","active");
-		// const taskState = document.querySelector(`input[data-task-state="active"]`);
-		$(this).css('background-color','#bdb37f');
-
-		var hh = Number($('#hh').val());
-		var mm = Number($('#mm').val());
-		var ss = Number($('#ss').val());
-
+		let hh = Number(document.querySelector('#hh').value);
+		let mm = Number(document.querySelector('#mm').value);
+		let ss = Number(document.querySelector('#ss').value);
+	
 		if(hh == 0 && mm == 0 && ss == 0){
 			alert("Establezca un tiempo");
 		} else {
-			let intervalHH = setInterval(function(){ 
+			let intervalHH = setInterval(function(){
 				--hh;
 				if(hh == 0){
 					clearInterval(intervalHH);
 					document.getElementById("audioSlowSpringBoard").play();
-					$("#btnStop").show();
 				}
-				$('#hh').empty().val(hh);
+				const hours = document.querySelector('#hh');
+				hours.value = hh;
 			}, 3600000);
-
-			let intervalMM = setInterval(function(){ 
+	
+			let intervalMM = setInterval(function(){
 				--mm;
 				if(mm == 0){
 					clearInterval(intervalMM);
 					document.getElementById("audioSlowSpringBoard").play();
-					$("#btnStop").show();
 				}
-				$('#mm').empty().val(mm);
+				const minutes = document.querySelector('#mm');
+				minutes.value = mm;
 			}, 60000);
-
-			let intervalSS = setInterval(function(){ 
+	
+			let intervalSS = setInterval(function(){
 				--ss;
 				if(ss == 0){
 					clearInterval(intervalSS);
 					playNotificationSound("audioSlowSpringBoard");
-					$(this).attr("data-task-state","inactive");
-					$(this).css('background-color','#F00');
-					$("#btnStop").show();
+					specificButtonTask.setAttribute('data-task-state', 'inactive');
+					specificButtonTask.style.backgroundColor = '#F00';
 				}
-				$('#ss').empty().val(ss);
+				const seconds = document.querySelector('#ss');
+				seconds.value = ss;
 			}, 1000);
 		}
+	}, false);
+}
 
-		// alert(hh + ' ' + mm);
-	});
+// console.log(x);
 
-	//PARECE QUE NO SE USA
-	$("#btnStart").click(function(){
-		//debugger;
-		var tiempo = Number($("#tiempo").val());
-		
-		if(tiempo == 0){
-			alert("Establezca un tiempo");
-		} else {
-			interval = setInterval(function(){ 
-				--tiempo;
-				if(tiempo == 0){
-					clearInterval(interval);
-					
-					$("#btnStop").show();
-				}
-				$("#tiempo_restante").empty().append(tiempo + ' minutos');
-			}, 60000);
-		}
-	});
-
-	//PARA ALARMAS LARGAS
-	$("#btnStop").click(function(){
-		document.getElementById("audioSlowSpringBoard").pause();
-		$("#btnStop").hide();
-		$("#tiempo").focus();
-	});
-
-});
+// //PARA ALARMAS LARGAS
+// $("#btnStop").click(function(){
+// 	document.getElementById("audioSlowSpringBoard").pause();
+// 	$("#btnStop").hide();
+// 	$("#tiempo").focus();
+// });
 
 function taskFinished() {
 	alert('Tarea terminada');
