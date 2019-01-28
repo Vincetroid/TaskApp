@@ -3,7 +3,7 @@ window.onload = () => {
 	const buttonTask = document.querySelector('.btn-task');
 	buttonTask.addEventListener('click', (e) => {
 		const specificButtonTask = e.target;
-		specificButtonTask.value = 'Hechos';
+		specificButtonTask.value = 'Hecho';
 		specificButtonTask.setAttribute('data-task-state', 'active');
 		specificButtonTask.style.backgroundColor = '#bdb37f';
 	
@@ -14,52 +14,34 @@ window.onload = () => {
 		if(hh == 0 && mm == 0 && ss == 0){
 			alert("Establezca un tiempo");
 		} else {
-			let intervalHH = setInterval(function(){
-				--hh;
-				if(hh == 0){
-					clearInterval(intervalHH);
-					document.getElementById("audioSlowSpringBoard").play();
-				}
-				const hours = document.querySelector('#hh');
-				hours.value = hh;
-			}, 3600000);
-	
-			let intervalMM = setInterval(function(){
-				--mm;
-				if(mm == 0){
-					clearInterval(intervalMM);
-					document.getElementById("audioSlowSpringBoard").play();
-				}
-				const minutes = document.querySelector('#mm');
-				minutes.value = mm;
-			}, 60000);
-	
-			let intervalSS = setInterval(function(){
-				--ss;
-				if(ss == 0){
-					clearInterval(intervalSS);
-					playNotificationSound("audioSlowSpringBoard");
-					specificButtonTask.setAttribute('data-task-state', 'inactive');
-					specificButtonTask.style.backgroundColor = '#F00';
-				}
-				const seconds = document.querySelector('#ss');
-				seconds.value = ss;
-			}, 1000);
+            
+            let selector = document.querySelector(`#hh`);
+            timer(hh, specificButtonTask, 3600000, selector);
+            
+            selector = document.querySelector(`#mm`);
+            timer(mm, specificButtonTask, 60000, selector);
+
+            selector = document.querySelector(`#ss`);
+			timer(ss, specificButtonTask, 1000, selector);
 		}
 	}, false);
 }
 
-// console.log(x);
-
-// //PARA ALARMAS LARGAS
-// $("#btnStop").click(function(){
-// 	document.getElementById("audioSlowSpringBoard").pause();
-// 	$("#btnStop").hide();
-// 	$("#tiempo").focus();
-// });
-
 function taskFinished() {
 	alert('Tarea terminada');
+}
+
+function timer(quantity, specificButtonTask, miliseconds, selector){
+    let interval = setInterval(function(){
+        --quantity;
+        if(quantity == 0){
+            clearInterval(interval);
+            playNotificationSound("audioSlowSpringBoard");
+            specificButtonTask.setAttribute('data-task-state', 'inactive');
+            specificButtonTask.style.backgroundColor = '#F00';
+        }
+        selector.value = quantity;
+    }, miliseconds);
 }
 
 function playNotificationSound(audioId) {
